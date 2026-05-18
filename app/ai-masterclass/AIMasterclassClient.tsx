@@ -573,7 +573,7 @@ import { Reveal } from "@/components/ScrollReveal";
 
 const learn = [
     {
-        num: "00",
+        num: "L0",
         icon: "Sparkles",
         title: "AI Basics for Industry & Students",
         items: [
@@ -586,7 +586,7 @@ const learn = [
         tag: "Ideal for industry professionals & fresh students.",
     },
     {
-        num: "01",
+        num: "L1",
         icon: "Bot",
         title: "Core AI & ML Essentials",
         items: [
@@ -599,7 +599,7 @@ const learn = [
         tag: "Build a rock-solid AI foundation.",
     },
     {
-        num: "02",
+        num: "L2",
         icon: "Palette",
         title: "Create with AI Tools",
         items: [
@@ -612,7 +612,7 @@ const learn = [
         tag: "Create assets that command real rates.",
     },
     {
-        num: "03",
+        num: "L3",
         icon: "Brain",
         title: "Advanced AI Concepts",
         items: [
@@ -634,7 +634,7 @@ const stats = [
 ];
 
 const highlights = [
-    "20+ AI tools covered in depth",
+    "40+ AI tools covered in depth",
     "Real industry projects to build portfolio",
     "Hindi + English bilingual instruction",
     "Lifetime access to course materials",

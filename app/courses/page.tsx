@@ -518,7 +518,7 @@ const courseCatalogSchema = {
       position: 6,
       item: {
         "@type": "Course",
-        name: "AI Masterclass",
+        name: "Gen-AI Masterclass",
         description: "ChatGPT, Midjourney, RunwayML, Agentic AI, RAG and Prompt Engineering.",
         provider: { "@type": "Organization", name: "AV Academy", url: SITE_URL },
         url: `${SITE_URL}/ai-masterclass`,

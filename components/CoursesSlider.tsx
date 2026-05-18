@@ -109,7 +109,7 @@ const courses = [
   {
     badge: "🔥 HOT",
     bType: "ai",
-    title: "AI Masterclass",
+    title: "Gen-AI Masterclass",
     dur: "6–8 Weeks",
     href: "/ai-masterclass",
   },
