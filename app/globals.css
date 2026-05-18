@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS VARIABLES (for gradients that Tailwind can't do inline) ── */
+:root {
+  --cyan1: #00b4d8;
+  --cyan2: #22d3ee;
+  --cyan3: #67e8f9;
+  --blue2: #00a8cc;
+  --teal2: #14b8a6;
+  --amber: #f59e0b;
+  --amber2: #fbbf24;
+  --gray:  #7a9db0;
+  --gray2: #a8c8dc;
+  --border: rgba(0,180,216,0.18);
+  --card2: #0c2236;
+  --bg3:   #071520;
+}
+
+@layer base {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: auto; }
+  body { @apply font-inter bg-bg text-white overflow-x-hidden; }
+  a { text-decoration: none; color: inherit; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { @apply bg-bg; }
+  ::-webkit-scrollbar-thumb { @apply bg-cyan1 rounded-sm; }
+}
+
+@layer components {
+  /* ── GRADIENT TEXT ── */
+  .grad-cyan  { @apply bg-grad-cyan bg-clip-text text-transparent; }
+  .grad-brand { @apply bg-grad-brand bg-clip-text text-transparent; }
+  .grad-amber { @apply bg-grad-amber bg-clip-text text-transparent; }
+  .grad-el    { @apply bg-grad-cyan bg-clip-text text-transparent; }
+  .grad-ac    { @apply bg-grad-amber bg-clip-text text-transparent; }
+
+  /* ── SECTION LABEL ── */
+  .sec-label {
+    @apply inline-flex items-center gap-1.5 font-bold text-[11px] tracking-[3px] uppercase text-cyan2 mb-3.5 font-syne;
+  }
+  .sec-label::before { content: '//'; @apply text-cyan1 text-[13px]; }
+
+  /* ── SHIMMER BUTTON ── */
+  .shimmer-btn { @apply relative overflow-hidden; }
+  .shimmer-btn::before {
+    content: '';
+    @apply absolute top-[-50%] left-[-60%] w-[40%] h-[200%] bg-white/15 skew-x-[-20deg] transition-[left] duration-500 pointer-events-none;
+  }
+  .shimmer-btn:hover::before { @apply left-[110%]; }
+
+  /* ── CARD HOVER LINE ── */
+  .card-line {
+    @apply absolute top-0 left-0 right-0 h-[3px] scale-x-0 origin-left transition-transform duration-[400ms] pointer-events-none;
+    background: linear-gradient(90deg, #00b4d8, #22d3ee);
+  }
+  .has-card-line:hover .card-line { @apply scale-x-100; }
+
+  /* ── BLINK DOT ── */
+  .blink-dot { @apply w-1.5 h-1.5 rounded-full bg-cyan2 animate-blink-dot inline-block flex-shrink-0; }
+
+  /* ── TYPED CURSOR ── */
+  .typed-cursor { @apply text-cyan2 animate-cursor-blink; }
+
+  /* ── SCROLL PROGRESS ── */
+  .scroll-progress { @apply fixed top-0 left-0 h-[2px] z-[1001] transition-[width] duration-100; background: linear-gradient(90deg, #00b4d8, #22d3ee, #67e8f9); }
+
+  /* ── ABOUT BOX ROTATE ── */
+  .about-rotate { @apply animate-about-rotate; }
+
+  /* ── ORBIT RINGS ── */
+  .orbit-1 { @apply absolute inset-0 rounded-full border border-cyan1/15 animate-spin-slow; }
+  .orbit-2 { @apply absolute inset-[30px] rounded-full border border-dashed border-cyan2/10 animate-spin-medium; }
+  .orbit-3 { @apply absolute inset-[60px] rounded-full animate-spin-fast; border: 1px solid rgba(0,168,204,0.08); }
+
+  /* ── TICKER ── */
+  .ticker-track { @apply flex gap-[60px] animate-ticker w-max whitespace-nowrap; }
+
+  /* ── PRELOADER ── */
+  .pre-ring { @apply w-20 h-20 rounded-full border-[3px] border-transparent animate-pre-spin; border-top-color: #00b4d8; border-right-color: #22d3ee; }
+  .pre-bar-fill { @apply h-full animate-pre-fill; background: linear-gradient(90deg, #00b4d8, #22d3ee); }
+
+  /* ── WA FLOAT ── */
+  .wa-float { @apply animate-wa-float; }
+
+  /* ── HERO ANIMS ── */
+  .fade-up        { @apply animate-fade-up; }
+  .fade-right-anim { @apply animate-fade-right; }
+
+  /* ── CHATBOT ── */
+  .animate-chat-open  { animation: chatOpen .3s cubic-bezier(.34,1.56,.64,1) both; }
+  .animate-msg-in     { animation: msgIn .3s ease both; }
+}
