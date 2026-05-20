@@ -932,9 +932,9 @@ export default function Navbar() {
             </div>
 
             <NavLink href="/about">About Us</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+            <NavLink href="/contact-us">Contact</NavLink>
 
-            <Link href="/contact" className="shimmer-btn ml-2 px-5 py-2.5 rounded-lg font-syne font-semibold text-sm text-white bg-grad-cyan-btn hover:opacity-90 transition-opacity flex items-center gap-2">
+            <Link href="/contact-us" className="shimmer-btn ml-2 px-5 py-2.5 rounded-lg font-syne font-semibold text-sm text-white bg-grad-cyan-btn hover:opacity-90 transition-opacity flex items-center gap-2">
               {/* <LucideIcon name="MessageCircle" size={14} /> Contact us */}
               Contact us
             </Link>
@@ -1029,7 +1029,7 @@ export default function Navbar() {
               { href: "/services/media", icon: "Tv", label: "Media" },
               { href: "/ai-training", icon: "Bot", label: "AI Training B2B" },
               { href: "/about", icon: "Info", label: "About Us" },
-              { href: "/contact", icon: "Phone", label: "Contact / Quote" },
+              { href: "/contact-us", icon: "Phone", label: "Contact / Quote" },
             ].map(item => (
               <MobileLink key={item.href} item={item} onClick={() => setMobOpen(false)} />
             ))}
@@ -1062,10 +1062,10 @@ function MobileLink({ item, onClick }: { item: { href: string; icon: string; lab
     <div className="border-b border-cyan1/10 py-3.5">
       <Link
         href={item.href}
-        className={`flex items-center gap-2.5 text-sm font-medium ${item.href === "/contact" ? "text-cyan2" : "text-gray2"}`}
+        className={`flex items-center gap-2.5 text-sm font-medium ${item.href === "/contact-us" ? "text-cyan2" : "text-gray2"}`}
         onClick={onClick}
       >
-        <LucideIcon name={item.icon} size={15} color={item.href === "/contact" ? "#22d3ee" : "#a8c8dc"} strokeWidth={1.5} />
+        <LucideIcon name={item.icon} size={15} color={item.href === "/contact-us" ? "#22d3ee" : "#a8c8dc"} strokeWidth={1.5} />
         {item.label}
       </Link>
     </div>

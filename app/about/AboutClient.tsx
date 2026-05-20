@@ -721,13 +721,13 @@ export default function AboutClient() {
                             Empowering 1500+ students with industry-ready skills — backed by our in-house creative agency{" "}
                             <strong className="text-cyan-400">AV EditLab</strong> for real-world project experience.
                         </p>
-                        <nav aria-label="Breadcrumb">
+                        {/* <nav aria-label="Breadcrumb">
                             <ol className="inline-flex items-center gap-2 text-[11px] sm:text-[13px] text-gray-500 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#082c44]/60 border border-cyan-500/15 list-none m-0">
                                 <li className="inline-flex items-center px-1"><Link href="/" className="text-cyan-400 no-underline font-semibold hover:text-cyan-300 transition-colors">Home</Link></li>
                                 <li className="inline-flex items-center" aria-hidden="true"><LucideIcon name="ChevronRight" size={12} color="#6b7280" /></li>
                                 <li className="inline-flex items-center px-1"><span className="text-gray-300" aria-current="page">About Us</span></li>
                             </ol>
-                        </nav>
+                        </nav> */}
                     </div>
                 </section>
 

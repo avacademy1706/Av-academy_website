@@ -138,7 +138,7 @@ export default function ContactClient() {
                             Reach out for course inquiries, project consultations, or just to say hi. We respond within 1 hour!
                         </p>
 
-                        <nav aria-label="Breadcrumb">
+                        {/* <nav aria-label="Breadcrumb">
                             <ol className="inline-flex items-center gap-1 text-[11px] sm:text-[13px] text-gray-500 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-[#082c44]/60 border border-cyan-500/15 list-none m-0">
                                 <li className="inline-flex items-center px-1">
                                     <Link href="/" className="text-cyan-400 no-underline font-semibold hover:text-cyan-300 transition-colors">
@@ -152,7 +152,7 @@ export default function ContactClient() {
                                     <span className="text-gray-300" aria-current="page">Contact</span>
                                 </li>
                             </ol>
-                        </nav>
+                        </nav> */}
                     </div>
                 </section>
 
