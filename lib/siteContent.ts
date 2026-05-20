@@ -73,6 +73,21 @@ export const SITE_CONTENT = {
     { name: "Rahul Sharma", role: "CEO, PackRight Industries", text: "AV EditLab transformed our packaging with breathtaking 3D renders. Sales went up 40% within 3 months of the rebrand. Absolutely world-class work!" },
     { name: "Priya Agarwal", role: "Director, The Royal Stays, Lucknow", text: "Our hotel's booking rate doubled after the cinematic tour video they created. Professional, creative, and delivers on time — always!" },
     { name: "Arjun Verma", role: "AI Freelancer & Academy Alumni", text: "I joined the AI Masterclass with zero background and now freelance earning ₹50,000/month using AI tools. AV Academy changed my career!" },
+    {
+      name: "Neobliss Lab India",
+      role: "Brand Client",
+      text: "The creativity and professionalism shown by AV Academy exceeded our expectations. Their design transformed our brand, and the results speak for themselves. The team was highly responsive, supportive, and delivered everything on time.",
+    },
+    {
+      name: "Hotel Roselleinn",
+      role: "Hospitality Client",
+      text: "AV Academy delivered exceptional creativity and professionalism. Their team understood our vision perfectly and transformed our brand with impactful design. The results exceeded our expectations, and we highly recommend AV Academy for reliable and innovative solutions.",
+    },
+    {
+      name: "Hotel Sai Paradise",
+      role: "Hospitality Client",
+      text: "AV Academy delivered exceptional creativity and professionalism. Their team understood our vision perfectly and transformed our brand with impactful design. The results exceeded our expectations, and we highly recommend AV Academy.",
+    },
   ],
 };
 
