@@ -12,7 +12,7 @@ npm install
 npm run dev
 
 # Production build
-npm run build
+npm run build  
 
 # View production export
 npx serve out/
