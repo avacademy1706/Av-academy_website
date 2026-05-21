@@ -197,9 +197,9 @@ export default function ContactClient() {
                                         <h2 className="font-syne font-extrabold text-lg sm:text-xl text-white mb-0.5">
                                             Send Us a Message
                                         </h2>
-                                        <p className="text-[11px] sm:text-xs text-gray-400 tracking-wide">
+                                        {/* <p className="text-[11px] sm:text-xs text-gray-400 tracking-wide">
                                             Email + WhatsApp — dono jagah message jayega
-                                        </p>
+                                        </p> */}
                                     </div>
                                 </div>
 
@@ -286,9 +286,9 @@ export default function ContactClient() {
                                             </div>
                                             <div>
                                                 <p className="text-sm font-semibold text-green-400 mb-0.5">Message Sent Successfully! 🎉</p>
-                                                <p className="text-xs text-green-400/70">
+                                                {/* <p className="text-xs text-green-400/70">
                                                     Email bhej diya gaya hai. WhatsApp bhi khul gaya hoga — wahan se bhi connect kar sakte ho!
-                                                </p>
+                                                </p> */}
                                             </div>
                                         </div>
                                     )}
@@ -299,7 +299,7 @@ export default function ContactClient() {
                                                 <LucideIcon name="AlertCircle" size={14} color="#f87171" strokeWidth={2} />
                                             </div>
                                             <div>
-                                                <p className="text-sm font-semibold text-red-400 mb-0.5">Kuch galat ho gaya</p>
+                                                <p className="text-sm font-semibold text-red-400 mb-0.5">Something went wrong!</p>
                                                 <p className="text-xs text-red-400/70">{errorMsg || "Please try again or contact via WhatsApp."}</p>
                                             </div>
                                         </div>
@@ -333,9 +333,9 @@ export default function ContactClient() {
                                         )}
                                     </button>
 
-                                    <p className="text-center text-[10px] sm:text-xs text-gray-500 -mt-1">
+                                    {/* <p className="text-center text-[10px] sm:text-xs text-gray-500 -mt-1">
                                         Submit karne pe — email aayegi aur WhatsApp bhi open hoga ✨
-                                    </p>
+                                    </p> */}
                                 </div>
                             </div>
                         </Reveal>
