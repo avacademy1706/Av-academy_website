@@ -11,7 +11,7 @@ npm install
 # Development server   
 npm run dev
 
-# Production build
+# Production build  
 npm run build  
 
 # View production export
