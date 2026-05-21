@@ -59,7 +59,7 @@ export default function Footer() {
           <div>
             <h5 className="font-syne font-bold text-xs tracking-widest uppercase mb-4 grad-cyan">AV Academy</h5>
             <ul className="space-y-2.5 list-none">
-              {[["/ai-masterclass", "AI Masterclass"], ["/courses", "All Courses"], ["/about", "About Us"], ["/contact", "Contact"]].map(([href, label]) => (
+              {[["/ai-masterclass", "AI Masterclass"], ["/courses", "All Courses"], ["/about", "About Us"], ["/contact-us", "Contact"]].map(([href, label]) => (
                 <li key={href}>
                   <Link href={href} className="flex items-center gap-1.5 text-[13px] text-gray1 transition-all hover:text-white hover:pl-1">
                     <span className="text-cyan2 text-sm">›</span> {label}
