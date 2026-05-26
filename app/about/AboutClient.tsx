@@ -631,6 +631,7 @@ import WAFloat from "@/components/WAFloat";
 import { CTASection } from "@/components/PageSections";
 import { Reveal } from "@/components/ScrollReveal";
 import Link from "next/link";
+import CertificationGallery from "@/components/Certificationgallery";
 
 const academyHighlights = [
     { icon: "GraduationCap", title: "Industry-Ready Courses", desc: "Curriculum designed with real industry demands" },
@@ -998,6 +999,9 @@ export default function AboutClient() {
                         </div>
                     </div>
                 </section>
+                {/* ============ CERTIFICATION GALLERY ============ */}
+                <CertificationGallery />
+
 
                 {/* WHY CHOOSE */}
                 <section className="relative px-4 sm:px-8 md:px-10 py-16 sm:py-20 md:py-24 bg-[#030f1a] overflow-hidden">
