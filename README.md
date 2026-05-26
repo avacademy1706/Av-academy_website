@@ -7,7 +7,7 @@
 ```bash   
 # Install dependencies  
 npm install
-
+  
 # Development server   
 npm run dev
 
