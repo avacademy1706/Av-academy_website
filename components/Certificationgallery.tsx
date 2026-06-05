@@ -189,6 +189,272 @@
 // }
 
 
+// "use client";
+
+// import { useState, useEffect } from "react";
+// import Image from "next/image";
+// import { Reveal } from "./ScrollReveal";
+// import LucideIcon from "./LucideIcon";
+
+// const images = [
+//     { src: "/gallery/Group.jpeg", alt: "Certification 1" },
+//     { src: "/gallery/eldeco certi.jpeg", alt: "Certification 2" },
+//     { src: "/gallery/eldeco certi2.jpeg", alt: "Certification 3" },
+//     { src: "/gallery/eldeco certi3.jpeg", alt: "Certification 4" },
+
+
+//     { src: "/gallery/eldico training 4.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 6.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 7.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 8.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 9.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 10.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 11.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 12.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 13.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 14.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 15.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 16.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 18.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 19.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 20.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 21.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 22.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 23.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 24.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 25.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico training 26.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico chanel.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico chanel 2.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico chanel 3.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico chanel 4.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico chanel 5.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/eldico chanel 6.jpeg", alt: "Certification 4" },
+//     { src: "/gallery/invest101 certi.jpeg", alt: "Certification 5" },
+//     { src: "/gallery/invest101 certi2.jpeg", alt: "Certification 6" },
+//     { src: "/gallery/invest101 1.jpeg", alt: "Certification 5" },
+//     { src: "/gallery/invest101 2.jpeg", alt: "Certification 5" },
+//     { src: "/gallery/invest101 3.jpeg", alt: "Certification 5" },
+//     { src: "/gallery/invest101 4.jpeg", alt: "Certification 5" },
+//     { src: "/gallery/invest101 5.jpeg", alt: "Certification 5" },
+//     { src: "/gallery/invest101 6.jpeg", alt: "Certification 5" },
+// ];
+
+// const len = images.length;
+
+// export default function CertificationGallery() {
+//     const [current, setCurrent] = useState(0);
+//     const [lightbox, setLightbox] = useState(false);
+
+//     function goPrev() { setCurrent((p) => (p - 1 + len) % len); }
+//     function goNext() { setCurrent((p) => (p + 1) % len); }
+
+//     // keyboard support
+//     useEffect(() => {
+//         if (!lightbox) return;
+//         const handler = (e: KeyboardEvent) => {
+//             if (e.key === "ArrowLeft") goPrev();
+//             if (e.key === "ArrowRight") goNext();
+//             if (e.key === "Escape") setLightbox(false);
+//         };
+//         window.addEventListener("keydown", handler);
+//         return () => window.removeEventListener("keydown", handler);
+//     }, [lightbox]);
+
+//     function getPos(i: number) {
+//         let diff = i - current;
+//         if (diff > len / 2) diff -= len;
+//         if (diff < -len / 2) diff += len;
+//         return diff;
+//     }
+
+//     type CardStyle = {
+//         transform: string;
+//         zIndex: number;
+//         opacity: number;
+//         filter: string;
+//         pointerEvents?: "none" | "auto";
+//     };
+
+//     function getCardStyle(pos: number): CardStyle {
+//         switch (pos) {
+//             case 0:
+//                 return { transform: "translateX(0%) scale(1)", zIndex: 10, opacity: 1, filter: "none" };
+//             case -1:
+//                 return { transform: "translateX(-68%) scale(0.72)", zIndex: 6, opacity: 0.65, filter: "blur(2px) brightness(0.55)" };
+//             case 1:
+//                 return { transform: "translateX(68%) scale(0.72)", zIndex: 6, opacity: 0.65, filter: "blur(2px) brightness(0.55)" };
+//             case -2:
+//                 return { transform: "translateX(-108%) scale(0.52)", zIndex: 3, opacity: 0.3, filter: "blur(4px) brightness(0.35)" };
+//             case 2:
+//                 return { transform: "translateX(108%) scale(0.52)", zIndex: 3, opacity: 0.3, filter: "blur(4px) brightness(0.35)" };
+//             default:
+//                 return { transform: "scale(0)", zIndex: 0, opacity: 0, filter: "none", pointerEvents: "none" };
+//         }
+//     }
+
+//     return (
+//         <section className="px-4 sm:px-8 md:px-10 py-16 sm:py-20 md:py-24 bg-[#061826] relative overflow-hidden">
+//             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full blur-3xl pointer-events-none bg-cyan-500/[0.06]" />
+//             <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full blur-3xl pointer-events-none bg-amber-500/[0.04]" />
+
+//             <div className="max-w-[1280px] mx-auto relative z-10">
+
+//                 {/* Heading */}
+//                 <Reveal>
+//                     <div className="text-center mb-12 sm:mb-16">
+//                         <div className="text-[10px] sm:text-xs font-bold tracking-[2px] uppercase text-cyan-400 mb-3">
+//               // Achievements
+//                         </div>
+//                         <h2 className="font-syne font-extrabold text-[clamp(1.8rem,3vw,2.8rem)] leading-tight tracking-tight text-white mb-4">
+//                             Our{" "}
+//                             <span className="bg-gradient-to-r from-amber-500 to-amber-400 bg-clip-text text-transparent">
+//                                 Certifications & Milestones
+//                             </span>
+//                         </h2>
+//                         <p className="text-sm sm:text-[15px] text-gray-400 max-w-[560px] mx-auto leading-relaxed">
+//                             Industry-recognized certifications and achievements from AV Academy & AV EditLab
+//                         </p>
+//                     </div>
+//                 </Reveal>
+
+//                 {/* Carousel */}
+//                 <div className="relative flex items-center justify-center" style={{ height: "clamp(260px, 45vw, 500px)" }}>
+
+//                     {images.map((img, i) => {
+//                         const pos = getPos(i);
+//                         if (Math.abs(pos) > 2) return null;
+//                         const style = getCardStyle(pos);
+
+//                         return (
+//                             <div
+//                                 key={img.src}
+//                                 className="absolute rounded-2xl overflow-hidden cursor-pointer"
+//                                 style={{
+//                                     width: "clamp(180px, 30vw, 340px)",
+//                                     aspectRatio: "3/4",
+//                                     transition: "all 0.5s cubic-bezier(0.4,0,0.2,1)",
+//                                     border: pos === 0 ? "2px solid rgba(0,180,216,0.55)" : "1px solid rgba(0,180,216,0.08)",
+//                                     boxShadow: pos === 0 ? "0 25px 60px rgba(0,180,216,0.18), 0 0 0 1px rgba(0,180,216,0.1)" : "none",
+//                                     ...style,
+//                                 }}
+//                                 onClick={() => {
+//                                     if (pos === 0) setLightbox(true);
+//                                     else if (pos < 0) goPrev();
+//                                     else goNext();
+//                                 }}
+//                             >
+//                                 <Image
+//                                     src={img.src}
+//                                     alt={img.alt}
+//                                     fill
+//                                     className="object-cover"
+//                                     sizes="(max-width: 640px) 60vw, 340px"
+//                                 />
+
+//                                 {/* center card overlay */}
+//                                 {pos === 0 && (
+//                                     <div className="absolute inset-0 bg-gradient-to-t from-[#020c12]/70 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-5">
+//                                         <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#020c12]/80 border border-cyan-500/40 backdrop-blur-sm">
+//                                             <LucideIcon name="ZoomIn" size={13} color="#22d3ee" strokeWidth={2} />
+//                                             <span className="text-[11px] text-cyan-400 font-semibold">Click to expand</span>
+//                                         </div>
+//                                     </div>
+//                                 )}
+//                             </div>
+//                         );
+//                     })}
+
+//                 </div>
+
+//                 {/* Controls */}
+//                 <div className="flex items-center justify-center gap-5 mt-8">
+
+//                     <button
+//                         onClick={goPrev}
+//                         className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#082c44]/80 border border-cyan-500/25 flex items-center justify-center hover:border-cyan-500/60 hover:bg-cyan-500/10 transition-all active:scale-95"
+//                     >
+//                         <LucideIcon name="ChevronLeft" size={20} color="#22d3ee" strokeWidth={2.5} />
+//                     </button>
+
+//                     <div className="flex gap-2 items-center">
+//                         {images.map((_, i) => (
+//                             <button
+//                                 key={i}
+//                                 onClick={() => setCurrent(i)}
+//                                 className={`rounded-full transition-all duration-300 ${current === i ? "w-6 h-2.5 bg-cyan-400" : "w-2.5 h-2.5 bg-white/20 hover:bg-white/40"
+//                                     }`}
+//                             />
+//                         ))}
+//                     </div>
+
+//                     <button
+//                         onClick={goNext}
+//                         className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#082c44]/80 border border-cyan-500/25 flex items-center justify-center hover:border-cyan-500/60 hover:bg-cyan-500/10 transition-all active:scale-95"
+//                     >
+//                         <LucideIcon name="ChevronRight" size={20} color="#22d3ee" strokeWidth={2.5} />
+//                     </button>
+
+//                 </div>
+
+//                 {/* Counter */}
+//                 <p className="text-center text-[11px] sm:text-xs text-gray-500 mt-3 font-semibold tracking-wider">
+//                     {current + 1} <span className="text-gray-600">/</span> {len}
+//                 </p>
+
+//             </div>
+
+//             {/* Lightbox */}
+//             {lightbox && (
+//                 <div
+//                     className="fixed inset-0 z-[9999] bg-[#020c12]/96 backdrop-blur-md flex items-center justify-center p-4 sm:p-10"
+//                     onClick={() => setLightbox(false)}
+//                 >
+//                     {/* Prev */}
+//                     <button
+//                         onClick={(e) => { e.stopPropagation(); goPrev(); }}
+//                         className="absolute left-4 sm:left-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#082c44]/80 border border-cyan-500/30 flex items-center justify-center hover:border-cyan-500/60 transition-all z-10 active:scale-95"
+//                     >
+//                         <LucideIcon name="ChevronLeft" size={22} color="#22d3ee" strokeWidth={2.5} />
+//                     </button>
+
+//                     {/* Image */}
+//                     <div
+//                         className="relative rounded-2xl overflow-hidden border border-cyan-500/30 shadow-2xl shadow-cyan-500/10"
+//                         style={{ width: "min(90vw, 480px)", aspectRatio: "3/4" }}
+//                         onClick={(e) => e.stopPropagation()}
+//                     >
+//                         <Image
+//                             src={images[current].src}
+//                             alt={images[current].alt}
+//                             fill
+//                             className="object-contain bg-[#061826]"
+//                             sizes="480px"
+//                         />
+//                         <button
+//                             onClick={() => setLightbox(false)}
+//                             className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#020c12]/80 border border-cyan-500/30 flex items-center justify-center hover:border-cyan-500/60 transition-all"
+//                         >
+//                             <LucideIcon name="X" size={15} color="#22d3ee" strokeWidth={2.5} />
+//                         </button>
+//                         <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-[#020c12]/80 border border-cyan-500/20 text-[11px] font-bold text-cyan-400 whitespace-nowrap">
+//                             {current + 1} / {len}
+//                         </div>
+//                     </div>
+
+//                     {/* Next */}
+//                     <button
+//                         onClick={(e) => { e.stopPropagation(); goNext(); }}
+//                         className="absolute right-4 sm:right-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-[#082c44]/80 border border-cyan-500/30 flex items-center justify-center hover:border-cyan-500/60 transition-all z-10 active:scale-95"
+//                     >
+//                         <LucideIcon name="ChevronRight" size={22} color="#22d3ee" strokeWidth={2.5} />
+//                     </button>
+//                 </div>
+//             )}
+//         </section>
+//     );
+// }
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -197,12 +463,45 @@ import { Reveal } from "./ScrollReveal";
 import LucideIcon from "./LucideIcon";
 
 const images = [
-    { src: "/gallery/Group.jpeg", alt: "Certification 1" },
-    { src: "/gallery/eldeco certi.jpeg", alt: "Certification 2" },
-    { src: "/gallery/eldeco certi2.jpeg", alt: "Certification 3" },
-    { src: "/gallery/eldeco certi3.jpeg", alt: "Certification 4" },
-    { src: "/gallery/invest101 certi.jpeg", alt: "Certification 5" },
-    { src: "/gallery/invest101 certi2.jpeg", alt: "Certification 6" },
+    { src: "/gallery/Group.jpeg", alt: "Group Photo" },
+    { src: "/gallery/eldeco certi.jpeg", alt: "Eldeco Certification" },
+    { src: "/gallery/eldeco certi2.jpeg", alt: "Eldeco Certification 2" },
+    { src: "/gallery/eldeco certi3.jpeg", alt: "Eldeco Certification 3" },
+    { src: "/gallery/eldico training 4.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 6.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 7.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 8.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 9.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 10.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 11.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 12.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 13.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 14.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 15.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 16.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 18.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 19.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 20.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 21.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 22.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 23.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 24.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 25.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico training 26.jpeg", alt: "Eldeco Training" },
+    { src: "/gallery/eldico chanel.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico chanel 2.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico chanel 3.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico chanel 4.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico chanel 5.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico chanel 6.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/invest101 certi.jpeg", alt: "Invest101 Certification" },
+    { src: "/gallery/invest101 certi2.jpeg", alt: "Invest101 Certification 2" },
+    { src: "/gallery/invest101 1.jpeg", alt: "Invest101 Event" },
+    { src: "/gallery/invest101 2.jpeg", alt: "Invest101 Event" },
+    { src: "/gallery/invest101 3.jpeg", alt: "Invest101 Event" },
+    { src: "/gallery/invest101 4.jpeg", alt: "Invest101 Event" },
+    { src: "/gallery/invest101 5.jpeg", alt: "Invest101 Event" },
+    { src: "/gallery/invest101 6.jpeg", alt: "Invest101 Event" },
 ];
 
 const len = images.length;
@@ -341,17 +640,6 @@ export default function CertificationGallery() {
                     >
                         <LucideIcon name="ChevronLeft" size={20} color="#22d3ee" strokeWidth={2.5} />
                     </button>
-
-                    <div className="flex gap-2 items-center">
-                        {images.map((_, i) => (
-                            <button
-                                key={i}
-                                onClick={() => setCurrent(i)}
-                                className={`rounded-full transition-all duration-300 ${current === i ? "w-6 h-2.5 bg-cyan-400" : "w-2.5 h-2.5 bg-white/20 hover:bg-white/40"
-                                    }`}
-                            />
-                        ))}
-                    </div>
 
                     <button
                         onClick={goNext}
