@@ -471,7 +471,7 @@ const images = [
     { src: "/gallery/eldico training 6.jpeg", alt: "Eldeco Training" },
     { src: "/gallery/eldico training 7.jpeg", alt: "Eldeco Training" },
     { src: "/gallery/eldico training 8.jpeg", alt: "Eldeco Training" },
-    { src: "/gallery/eldicotraining9.jpeg", alt: "Eldeco Training" },
+    // { src: "/gallery/eldicotraining9.jpeg", alt: "Eldeco Training" },
     { src: "/gallery/eldico training 10.jpeg", alt: "Eldeco Training" },
     { src: "/gallery/eldico training 11.jpeg", alt: "Eldeco Training" },
     { src: "/gallery/eldico training 12.jpeg", alt: "Eldeco Training" },
