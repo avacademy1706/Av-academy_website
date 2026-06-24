@@ -494,6 +494,18 @@ const images = [
     { src: "/gallery/eldico chanel 4.jpeg", alt: "Eldeco Channel" },
     { src: "/gallery/eldico chanel 5.jpeg", alt: "Eldeco Channel" },
     { src: "/gallery/eldico chanel 6.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico batch 1.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico batch 2.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico batch 3.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico batch 4.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico batch 5.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico batch 6.jpeg", alt: "Eldeco Channel" },
+    { src: "/gallery/eldico batch 7.jpeg", alt: "Eldeco Channel" },
+
+    { src: "/gallery/eldico batch 9.jpeg", alt: "Eldeco Channel" },
+
+
+
     { src: "/gallery/invest101 certi.jpeg", alt: "Invest101 Certification" },
     { src: "/gallery/invest101 certi2.jpeg", alt: "Invest101 Certification 2" },
     { src: "/gallery/invest101 1.jpeg", alt: "Invest101 Event" },
@@ -502,6 +514,7 @@ const images = [
     { src: "/gallery/invest101 4.jpeg", alt: "Invest101 Event" },
     { src: "/gallery/invest101 5.jpeg", alt: "Invest101 Event" },
     { src: "/gallery/invest101 6.jpeg", alt: "Invest101 Event" },
+
 ];
 
 const len = images.length;
