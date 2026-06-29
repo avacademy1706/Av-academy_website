@@ -125,6 +125,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/a.v.png",
   },
+  verification: {
+    google: "QPVaBE_8JLiiAkxkz3QFATnDtku6ik4xxUI23WRinP8",
+  },
 };
 
 export default function RootLayout({
